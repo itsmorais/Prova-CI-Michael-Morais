@@ -19,7 +19,7 @@ router.post('/', async (req, res) => {
     const { titulo, autor, ano, preco, foto } = req.body;
 
     if (!titulo, !autor, !ano, !preco, !foto) {
-        res.status(400).json({ msg: "Enviar titulo, autor, ano, preco e foto do livro" });
+        res.status(400).json({ msg: "Enviar titulo, autor, ano, preço e foto do livro" });
         return;
     }
 
