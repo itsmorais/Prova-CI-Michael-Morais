@@ -1,7 +1,6 @@
 const express = require('express');
 const livros = require('./livros')
 const app = express();
-const PORT = 3001;
 
 app.use(express.json());
 
@@ -29,6 +28,8 @@ app.get("/transfere",log,(req,res)=>{
 
 app.use('/livros',livros);
 
-app.listen(PORT, () => {
-  console.log(`Servidor rodando em: http://localhost:${PORT}`)
-})
+module.exports = app;
+
+// app.listen(PORT, () => {
+//   console.log(`Servidor rodando em: http://localhost:${PORT}`)
+// })
